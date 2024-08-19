@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import Container from '../Container'
 import useAuthPro from '../CustomHook/useAuthPro'
 import { ToastContainer } from 'react-toastify'
+import Google from '../Google'
 
 const SignIn = () => {
-  const {SignInAll} = useAuthPro()
+  const {SignInAll, googleGet} = useAuthPro()
   const [fname, setFname] = useState("")
   const [lname, setLname] = useState("")
   const [email, setEmail] = useState("")
@@ -32,6 +33,7 @@ const SignIn = () => {
           <button className='p-2 rounded-md bg-green-500 outline-none uppercase font-bold' type='submit'>submit</button>
         </form>
         <ToastContainer/>
+        <Google google={googleGet}/>
       </Container>
     </div>
   )
