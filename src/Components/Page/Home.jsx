@@ -31,6 +31,10 @@ const Home = () => {
   return (
     <div>
       {HomeUser ? <Container>
+        {/* image of user  */}
+        <div className='flex items-center justify-center'>
+        <img src={HomeUser.Photo} alt="no photo" className='rounded-full ' />
+        </div>
         {/* header */}
         <h1 className='text-2xl text-center font-bold'>Welcome Parashar Das</h1>
         {/* details section */}

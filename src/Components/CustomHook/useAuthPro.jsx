@@ -98,7 +98,8 @@ const useAuthPro = () => {
             setDoc(docRef, {
                 FirstName: user?.displayName,
                 LastName: user?.displayName,
-                Email: user?.email
+                Email: user?.email,
+                Photo: user?.photoURL
             })
             //sending toast massaging
             toast.success("google logIn success",{
